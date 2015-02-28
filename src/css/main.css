@@ -165,7 +165,7 @@ textarea {
     background: transparent !important;
     color: #000 !important;
     /* Black prints faster:
-                                   http://www.sanbeiji.com/archives/953 */
+                                          http://www.sanbeiji.com/archives/953 */
     box-shadow: none !important;
     text-shadow: none !important;
   }
@@ -180,9 +180,9 @@ textarea {
     content: " (" attr(title) ")";
   }
   /*
-   * Don't show links that are fragment identifiers,
-   * or use the `javascript:` pseudo protocol
-   */
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
   a[href^="#"]:after,
   a[href^="javascript:"]:after {
     content: "";
@@ -193,9 +193,9 @@ textarea {
     page-break-inside: avoid;
   }
   /*
-   * Printing Tables:
-   * http://css-discuss.incutio.com/wiki/Printing_Tables
-   */
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
   thead {
     display: table-header-group;
   }
@@ -247,21 +247,27 @@ body {
 }
 #idHead #idPrev {
   position: absolute;
-  top: 8px;
-  left: 140px;
-  width: 100px;
-  height: 100px;
+  top: 12px;
+  right: 140px;
+  width: 90px;
+  height: 90px;
   background: url('../img/circle_back_arrow-128.png') no-repeat center center;
   background-size: cover;
 }
+#idHead #idPrev.hover {
+  background-image: url('../img/circle_back_arrow_-128.png');
+}
 #idHead #idNext {
   position: absolute;
-  top: 8px;
-  left: 260px;
-  width: 100px;
-  height: 100px;
+  top: 12px;
+  right: 24px;
+  width: 90px;
+  height: 90px;
   background: url('../img/circle_next_arrow_disclosure-128.png') no-repeat center center;
   background-size: cover;
+}
+#idHead #idNext.hover {
+  background-image: url('../img/circle_next_arrow_disclosure_-128.png');
 }
 #idBorder {
   top: 112px;
@@ -285,17 +291,66 @@ body {
   width: 100%;
   height: 88%;
 }
+#idContent #idTimerGage {
+  position: absolute;
+  z-index: 100;
+  left: 4px;
+  width: 10px;
+  height: 240px;
+  background-image: -webkit-gradient(linear, 0 50%, 100% 50%, color-stop(0%, #e65d5b), color-stop(14%, #f3af32), color-stop(28%, #e6d168), color-stop(40%, #7bd369), color-stop(55%, #50c6a2), color-stop(70%, #a7d37c), color-stop(85%, #a7b958), color-stop(100%, #e35c57));
+  background-image: -webkit-linear-gradient(top, #e65d5b, #f3af32 14%, #e6d168 28%, #7bd369 40%, #50c6a2 55%, #a7d37c 70%, #a7b958 85%, #e35c57);
+  background-image: -moz-linear-gradient(top, #e65d5b, #f3af32 14%, #e6d168 28%, #7bd369 40%, #50c6a2 55%, #a7d37c 70%, #a7b958 85%, #e35c57);
+  background-image: -o-linear-gradient(top, #e65d5b, #f3af32 14%, #e6d168 28%, #7bd369 40%, #50c6a2 55%, #a7d37c 70%, #a7b958 85%, #e35c57);
+  background-image: linear-gradient(top, #e65d5b, #f3af32 14%, #e6d168 28%, #7bd369 40%, #50c6a2 55%, #a7d37c 70%, #a7b958 85%, #e35c57);
+}
+#idContent #idShield {
+  opacity: 1;
+  position: absolute;
+  width: 100%;
+  height: 300px;
+  background: #4780d6;
+  z-index: 50;
+  padding: 100px 0px;
+  -webkit-transition: left 0.5s, opacity 0.5s;
+  -moz-transition: left 0.5s, opacity 0.5s;
+  -ms-transition: left 0.5s, opacity 0.5s;
+  -o-transition: left 0.5s, opacity 0.5s;
+  transition: left 0.5s, opacity 0.5s;
+}
 .word {
+  z-index: 100;
+  position: absolute;
+  top: 0px;
+  left: 0px;
   opacity: 0;
+  text-align: left;
   border: 3px solid white;
   border-radius: 5px;
   line-height: 1em;
   font-size: 300%;
   color: white;
-  margin: .67em 0;
+  margin: 14px 0;
   font-weight: 100;
   padding: .3em .6em;
+  -webkit-transition: left 0.5s, opacity 0.5s;
+  -moz-transition: left 0.5s, opacity 0.5s;
+  -ms-transition: left 0.5s, opacity 0.5s;
+  -o-transition: left 0.5s, opacity 0.5s;
+  transition: left 0.5s, opacity 0.5s;
+}
+.description {
+  z-index: 1;
   position: absolute;
+  top: 0px;
+  left: 0px;
+  text-align: left;
+  line-height: 48px;
+  word-spacing: .1px;
+  color: white;
+  margin: 84px 0;
+  font-size: 36px;
+  padding: .3em .6em;
+  text-indent: 20px;
   -webkit-transition: left 0.5s, opacity 0.5s;
   -moz-transition: left 0.5s, opacity 0.5s;
   -ms-transition: left 0.5s, opacity 0.5s;
